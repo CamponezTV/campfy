@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/providers/team-provider";
 import { cn } from "@/lib/utils";
 const font = Open_Sans({ subsets: ["latin"] });
 import './globals.css';
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 export const metadata: Metadata = {
   title: "Team Chat Application",
@@ -29,6 +30,7 @@ export default function RootLayout({
             enableSystem={false}
             storageKey="campfy-theme"
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
           </body>
